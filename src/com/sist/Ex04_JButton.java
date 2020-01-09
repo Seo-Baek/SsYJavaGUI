@@ -1,30 +1,38 @@
 package com.sist;
 
 import java.awt.Color;
-import java.awt.Container;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Ex04_JButton {
 
 	public static void main(String[] args) {
 		
-		//1. 프레임을 만들자.
+		// 1. 프레임을 만들자.
 		JFrame jf = new JFrame();
 		
-		Container container = jf.getContentPane();
+		// 2. 컨테이너를 만들자
+		JPanel jp = new JPanel();
 		
-		container.setBackground(Color.ORANGE);//프레임의 배경색을 오렌지색으로 설정
+		jp.setBackground(Color.ORANGE);
 		
-		// 2. 버튼이라는 컴포넌트를 만들어 보자.
+		// 3. 버튼이라는 컴포넌트를 만들어 보자.
 		JButton jb = new JButton("버튼1");
+		JButton jb2 = new JButton("버튼2");
+		JButton jb3 = new JButton("버튼3");
 		
-		// 3. 버튼이라는 컴포넌트를 컨테이너에 올리자.
-		container.add(jb);
+		// 4. 버튼이라는 컴포넌트를 컨테이너에 올리자.
+		jp.add(jb); jp.add(jb2); jp.add(jb3);
 		
-		// 4. 컨테이너를 프레임에 올리자.
-		jf.add(container);
+		// 5. 컨테이너를 프레임에 올리자.
+		jf.add(jp);
+		
+		// 화면의 크기와 위치를 설정해주자.
+		jf.setBounds(100, 100, 400, 400);
+		
+		jf.setVisible(true);
 	}
 
 }
