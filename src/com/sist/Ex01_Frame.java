@@ -44,7 +44,7 @@ import java.awt.Frame;
  */
 
 public class Ex01_Frame extends Frame {
-	
+
 	public Ex01_Frame() {	// 기본생성자
 		
 		// 프레임에 제목(title)을 설정하는 방법
